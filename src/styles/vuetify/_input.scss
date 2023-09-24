@@ -1,0 +1,20 @@
+.v-input {
+  color: rgb(var(--v-theme-secondary));
+
+  .v-field {
+    &__overlay {
+      background-color: transparent !important;
+    }
+
+  }
+
+  &__append {
+    color: rgb(var(--v-theme-primary));
+    cursor: pointer;
+    transition: 0.25s ease-in-out opacity;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
