@@ -1,20 +1,18 @@
 <script setup lang="ts">
+import Task from '@/components/Task/Task.vue';
+import { AddTaskButtonStore, ITask, useAddTaskButtonStore } from '@/store';
+import TaskCreate from '@/components/Task/TaskCreate.vue';
+import { onMounted, ref } from 'vue';
 
-import Task from "@/components/Task/Task.vue";
-import {AddTaskButtonStore, ITask, useAddTaskButtonStore} from "@/store";
-import TaskCreate from "@/components/Task/TaskCreate.vue";
-import {onMounted, ref} from "vue";
-
-const {taskList} = defineProps<{ taskList: ITask[] }>()
+const { taskList } = defineProps<{ taskList: ITask[] }>();
 
 const tasksStore = useAddTaskButtonStore();
 
-
-const addTaskButtonState = ref<AddTaskButtonStore>({isActive: false});
+const addTaskButtonState = ref<AddTaskButtonStore>({ isActive: false });
 
 onMounted(() => {
   addTaskButtonState.value = tasksStore.$state;
-})
+});
 </script>
 
 <template>
@@ -23,7 +21,7 @@ onMounted(() => {
       <TaskCreate />
     </li>
     <li class="tasks-list-item" v-for="task in taskList" :key="task.id">
-      <Task :task="task"/>
+      <Task :task="task" />
     </li>
   </ul>
 </template>

@@ -1,17 +1,18 @@
-import {defineStore} from "pinia";
+import { defineStore } from 'pinia';
 
 export type AddTaskButtonStore = {
-    isActive: boolean;
-}
+  isActive: boolean;
+};
 
 export const useAddTaskButtonStore = defineStore({
-    id: 'addTaskButtonStore',
-    state: () => ({
-        isActive: false,
-    } as AddTaskButtonStore),
-    actions: {
-        change() {
-            this.isActive = !this.isActive;
-        }
-    }
-})
+  id: 'addTaskButtonStore',
+  state: () =>
+    ({
+      isActive: false,
+    }) as AddTaskButtonStore,
+  actions: {
+    change() {
+      this.isActive = !this.isActive;
+    },
+  },
+});

@@ -1,21 +1,27 @@
 <template>
-  <v-btn density="default" class="text-white" :icon="icon" @click="handleButtonClick()"></v-btn>
+  <v-btn
+    density="default"
+    class="text-white"
+    :icon="icon"
+    @click="handleButtonClick()"
+  ></v-btn>
 </template>
 
 <script setup lang="ts">
-import {computed, onMounted, ref} from "vue";
-import {AddTaskButtonStore, useAddTaskButtonStore} from "@/store";
+import { computed, onMounted, ref } from 'vue';
+import { AddTaskButtonStore, useAddTaskButtonStore } from '@/store';
 
 const tasksStore = useAddTaskButtonStore();
 
-
-const addTaskButtonState = ref<AddTaskButtonStore>({isActive: false});
+const addTaskButtonState = ref<AddTaskButtonStore>({ isActive: false });
 
 onMounted(() => {
   addTaskButtonState.value = tasksStore.$state;
-})
+});
 
-const icon = computed(() => addTaskButtonState.value.isActive ? 'mdi-close' : 'mdi-plus');
+const icon = computed(() =>
+  addTaskButtonState.value.isActive ? 'mdi-close' : 'mdi-plus',
+);
 
 function handleButtonClick(): void {
   tasksStore.change();

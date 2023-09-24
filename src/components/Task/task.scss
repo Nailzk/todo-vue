@@ -61,12 +61,11 @@
   }
 
   &.done {
-    .name-text, .created-at {
+    .name-text,
+    .created-at {
       text-decoration: line-through;
-      text-decoration-color: rgb(var(--v-theme-socondary));;
+      text-decoration-color: rgb(var(--v-theme-socondary));
     }
-
-
   }
 
   &:hover {

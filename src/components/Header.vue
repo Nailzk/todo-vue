@@ -3,28 +3,33 @@
     <div class="date">
       <div class="current-date">
         <h1 class="h-1 font-weight-bold text-purple">{{ currentDayName }},</h1>
-        <h2 class="h-2 font-weight-regular text-purple">{{currentDayNumber}}th</h2>
+        <h2 class="h-2 font-weight-regular text-purple">
+          {{ currentDayNumber }}th
+        </h2>
       </div>
       <div class="month">
-        <p class="body-2 text-secondary font-weight-medium">{{currentMonthName}}</p>
+        <p class="body-2 text-secondary font-weight-medium">
+          {{ currentMonthName }}
+        </p>
       </div>
     </div>
-    <div class="counter text-secondary"><span class="font-weight-medium">{{ count }}</span> Tasks</div>
+    <div class="counter text-secondary">
+      <span class="font-weight-medium">{{ count }}</span> Tasks
+    </div>
 
-    <AddTaskButton/>
+    <AddTaskButton />
   </header>
 </template>
 
 <script setup lang="ts">
-import AddTaskButton from "@/components/AddTaskButton.vue";
-import {DateUtils} from "@/utils";
+import AddTaskButton from '@/components/AddTaskButton.vue';
+import { DateUtils } from '@/utils';
 
-const {count} = defineProps<{ count: Number }>()
+const { count } = defineProps<{ count: Number }>();
 
 const currentDayName = DateUtils.getCurrentDayName();
 const currentDayNumber = DateUtils.getCurrentDayNumber();
 const currentMonthName = DateUtils.getCurrentMonthName();
-
 </script>
 
 <style scoped>

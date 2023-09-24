@@ -1,4 +1,4 @@
 export interface IRequestState {
-    loading: boolean;
-    error?: string;
+  loading: boolean;
+  error?: string;
 }

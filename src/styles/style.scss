@@ -1,44 +1,42 @@
-@import "vuetify";
+@import 'vuetify';
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    overflow: hidden;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow: hidden;
 
-    background-image: linear-gradient(
-            310deg,
-            hsl(359deg 91% 70%) 0%,
-            hsl(350deg 89% 68%) 11%,
-            hsl(342deg 85% 65%) 22%,
-            hsl(334deg 79% 62%) 33%,
-            hsl(325deg 70% 59%) 44%,
-            hsl(315deg 59% 56%) 56%,
-            hsl(300deg 46% 52%) 67%,
-            hsl(282deg 53% 56%) 78%,
-            hsl(262deg 61% 59%) 89%,
-            hsl(238deg 68% 61%) 100%
-    );
+  background-image: linear-gradient(
+    310deg,
+    hsl(359deg 91% 70%) 0%,
+    hsl(350deg 89% 68%) 11%,
+    hsl(342deg 85% 65%) 22%,
+    hsl(334deg 79% 62%) 33%,
+    hsl(325deg 70% 59%) 44%,
+    hsl(315deg 59% 56%) 56%,
+    hsl(300deg 46% 52%) 67%,
+    hsl(282deg 53% 56%) 78%,
+    hsl(262deg 61% 59%) 89%,
+    hsl(238deg 68% 61%) 100%
+  );
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-height: 100vh;
-    min-width: 100vw;
-    overflow-y: hidden;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-y: hidden;
 }
 
 #app {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
