@@ -1,4 +1,9 @@
-export type StoreAction<D = unknown, T = unknown> = (
+export type StoreAction<D = unknown, T = {}> = (
   this: D,
-  params: T,
-) => Promise<void>;
+  params?: T,
+) => void;
+
+export type StoreActionParams<S = unknown, P = {}> = (
+  this: S,
+  params: P
+) => void;

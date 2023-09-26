@@ -1,8 +1,8 @@
-import { ICreateItem, StoreAction } from '@/store/interface';
+import { ICreateItem, StoreActionParams } from '@/store/interface';
 import { ITask, TasksState } from '@/store';
 import TasksService from '@/store/task/tasks-service.ts';
 
-export const createItem: StoreAction<
+export const createItem: StoreActionParams<
   TasksState,
   ICreateItem<ITask>
 > = async function (task: ICreateItem<ITask>): Promise<void> {

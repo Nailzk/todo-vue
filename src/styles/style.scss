@@ -6,20 +6,6 @@
   font-weight: 400;
   overflow: hidden;
 
-  background-image: linear-gradient(
-    310deg,
-    hsl(359deg 91% 70%) 0%,
-    hsl(350deg 89% 68%) 11%,
-    hsl(342deg 85% 65%) 22%,
-    hsl(334deg 79% 62%) 33%,
-    hsl(325deg 70% 59%) 44%,
-    hsl(315deg 59% 56%) 56%,
-    hsl(300deg 46% 52%) 67%,
-    hsl(282deg 53% 56%) 78%,
-    hsl(262deg 61% 59%) 89%,
-    hsl(238deg 68% 61%) 100%
-  );
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,6 +20,40 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   overflow-y: hidden;
+
+  &.light {
+    background-image: linear-gradient(
+                    310deg,
+                    hsl(359deg 91% 70%) 0%,
+                    hsl(350deg 89% 68%) 11%,
+                    hsl(342deg 85% 65%) 22%,
+                    hsl(334deg 79% 62%) 33%,
+                    hsl(325deg 70% 59%) 44%,
+                    hsl(315deg 59% 56%) 56%,
+                    hsl(300deg 46% 52%) 67%,
+                    hsl(282deg 53% 56%) 78%,
+                    hsl(262deg 61% 59%) 89%,
+                    hsl(238deg 68% 61%) 100%
+    );
+  }
+
+  &.dark {
+    background-image: linear-gradient(
+                    45deg,
+                    hsl(157deg 17% 44%) 0%,
+                    hsl(157deg 15% 48%) 10%,
+                    hsl(157deg 14% 52%) 20%,
+                    hsl(157deg 15% 55%) 30%,
+                    hsl(158deg 15% 59%) 40%,
+                    hsl(158deg 16% 64%) 50%,
+                    hsl(163deg 13% 54%) 60%,
+                    hsl(168deg 15% 44%) 70%,
+                    hsl(172deg 19% 35%) 80%,
+                    hsl(176deg 27% 26%) 90%,
+                    hsl(180deg 44% 17%) 100%
+    );
+  }
+
 }
 
 #app {

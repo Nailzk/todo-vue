@@ -11,14 +11,14 @@
       </v-text-field>
 
       <v-btn
-        color="white"
+        color="accet-bg"
         elevation="0"
         type="submit"
         block
         icon="mdi-check"
       ></v-btn>
       <v-btn
-        color="white"
+        color="accet-bg"
         elevation="0"
         type="submit"
         block
@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { ITask } from '@/store';
 import { ref } from 'vue';
-import { TASK_INPUT_RULES } from '@/components/Task/task.rules.ts';
+import { TASK_INPUT_RULES } from '@/components/Task/task-create.rules.ts';
 
 const emit = defineEmits(['cancel', 'update']);
 

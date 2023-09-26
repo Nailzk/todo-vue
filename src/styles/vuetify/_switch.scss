@@ -1,0 +1,11 @@
+.v-switch {
+  &.theme-switch {
+    .v-switch__thumb {
+      background: rgb(var(--v-theme-accentBg));
+      color: rgb(var(--v-theme-primary));
+      height: 25px;
+      width: 25px;
+      font-size: 20px;
+    }
+  }
+}

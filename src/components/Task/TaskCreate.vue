@@ -9,7 +9,7 @@
       >
         <template v-slot:append>
           <v-btn
-            color="white"
+            color="accet-bg"
             elevation="0"
             type="submit"
             block
@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { useAddTaskButtonStore, useTasksStore } from '@/store';
 import { ref } from 'vue';
-import { TASK_INPUT_RULES } from '@/components/Task/task.rules.ts';
+import { TASK_INPUT_RULES } from '@/components/Task/task-create.rules.ts';
 
 const rules = TASK_INPUT_RULES;
 

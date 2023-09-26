@@ -1,24 +1,17 @@
 <script setup lang="ts">
 import Header from '@/components/Header.vue';
 import TasksList from '@/components/Task/TasksList.vue';
-import { TasksState, useTasksStore } from '@/store';
-import { onMounted, ref } from 'vue';
+import { useTasksStore } from '@/store';
 
 const tasksStore = useTasksStore();
 
-const itemsState = ref<TasksState>({ items: [], total: 0 });
-
 tasksStore.getAll();
-
-onMounted(() => {
-  itemsState.value = tasksStore.$state;
-});
 </script>
 
 <template>
   <div class="wrapper">
-    <Header :count="itemsState.total" />
-    <TasksList :taskList="itemsState.items" />
+    <Header :count="tasksStore.total" />
+    <TasksList :taskList="tasksStore.items" />
   </div>
 </template>
 
@@ -26,7 +19,7 @@ onMounted(() => {
 .wrapper {
   border-radius: 12px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: rgb(var(--v-theme-accentBg));
   height: 100%;
 }
 </style>

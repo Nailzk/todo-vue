@@ -2,21 +2,21 @@ import { defineStore } from 'pinia';
 import {
   createItem,
   deleteItem,
-  updateItem,
   getAll,
+  updateItem,
 } from '@/store/task/actions';
+import { IBaseItem } from '../interface';
 
-export type ITask = {
+export interface ITask extends IBaseItem {
   id: number;
   name: string;
   isDone: boolean;
   createdAt: Date;
-};
+}
 
 export type TasksState = {
   items: ITask[];
   total: number;
-  updateLoading: boolean;
 };
 
 export const useTasksStore = defineStore({
@@ -25,7 +25,6 @@ export const useTasksStore = defineStore({
     ({
       items: [],
       total: 0,
-      updateLoading: false,
     }) as TasksState,
   actions: {
     getAll,
